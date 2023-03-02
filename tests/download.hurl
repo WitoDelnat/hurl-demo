@@ -1,4 +1,4 @@
-POST https://api.monokle.com/graphql
+POST {{api_origin}}/graphql
 Authorization: Bearer {{access_token}}
 [Options]
 variable: owner=kubeshop
@@ -26,7 +26,7 @@ branch: jsonpath "$.data.getRepository.defaultBranch"
 duration < 1500
 variable "branch" == "main"
 
-POST https://api.monokle.com/graphql
+POST {{api_origin}}/graphql
 Authorization: Bearer {{access_token}}
 
 ```graphql
@@ -52,8 +52,8 @@ HTTP 200
 [Captures]
 ref: jsonpath "$.data.getRepository.ref.sha"
 
-GET https://api.monokle.com/content/download/github/{{owner}}/{{repo}}/{{ref}}
-Origin: https://app.monokle.com
+GET {{content_origin}}/content/download/github/{{owner}}/{{repo}}/{{ref}}
+Origin: {{app_origin}}
 Authorization: Bearer {{access_token}}
 
 HTTP 200

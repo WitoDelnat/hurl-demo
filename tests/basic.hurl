@@ -1,4 +1,4 @@
-POST https://api.monokle.com/graphql
+POST {{api_origin}}/graphql
 Authorization: Bearer {{access_token}}
 
 ```graphql
