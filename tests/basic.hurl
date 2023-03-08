@@ -12,7 +12,7 @@ query getDefaultBranch($owner: String!, $repo: String!) {
 
 variables {
   "owner": "kubeshop",
-  "repo": "monokle-saas"
+  "repo": "monokle-demo"
 }
 ```
 
